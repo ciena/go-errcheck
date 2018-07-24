@@ -1,0 +1,6 @@
+#!/bin/bash
+PACKAGES=$(find /go/src -name "*.go" | grep -v "\/vendor\/" | grep -v "\/\.git\/" | sed -e 's/\/[^\/]*\.go$//g' -e 's/\/go\/src\///g' | sort -u)
+
+echo $PACKAGES
+
+/go/bin/errcheck $* $PACKAGES
