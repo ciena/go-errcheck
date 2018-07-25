@@ -5,7 +5,7 @@
 _Example using the oftee application_
 
 ```
-docker run -ti --rm -v $(pwd)/src/github.com/ciena/oftee:/go/src/github.com/ciena/oftee errcheck
+docker run -ti --rm -v $(pwd)/src/github.com/ciena/oftee:/go/src/github.com/ciena/oftee ciena/go-errcheck
 ```
 
 Any flags specified at the end of the run command will be passed to the `errcheck`
